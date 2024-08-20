@@ -1,3 +1,23 @@
+# Common Git actions for this repo.
+https://docs.qmk.fm/newbs_git_using_your_master_branch
+## sync fork with official
+```bash
+git remote -v
+# origin  https://github.com/<your_username>/qmk_firmware.git (fetch)
+# origin  https://github.com/<your_username>/qmk_firmware.git (push)
+# upstream        https://github.com/qmk/qmk_firmware.git (fetch)
+# upstream        https://github.com/qmk/qmk_firmware.git (push)
+
+git checkout master
+git fetch upstream
+git pull upstream master
+git push origin master
+```
+
+```bash
+git checkout -b dev_branch
+git push --set-upstream origin dev_branch
+```
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
